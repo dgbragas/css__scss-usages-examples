@@ -1,4 +1,4 @@
-# **SCSS - Pré Processadores**
+# **SCSS - Pré Processador CSS**
 
 Surgidos com o propósito de facilitar o processo de criação dos códigos CSS, os pré processadores são vantajosos quando o assunto se trata de **produtividade**, **agilidade** e **organização** do código; valendo ressaltar que sua curva de aprendizado é extremamente alta.
 
