@@ -1,0 +1,48 @@
+/*
+ * As expressões do SCSS podem ser utilizadas para simplificar a construção de vários elementos 
+ * parecidos mas que possuem algumas características diferentes.
+ */
+
+@each $item in sun, glass, sunset {
+  /* 
+   * Quando queremos utilizar uma referência de determinada variável, colocamos um scape da seguinte maneira: #{$}.
+   */
+  .#{$item} {
+
+    @if ($item == glass) {
+      padding: 20px;
+    }
+    
+    @if ($item == sun) {
+      margin: 30px;
+    } @else if ($item == sunset) {
+      margin: 20px;
+    } @else {
+      margin: 10px;
+    }
+
+    background-image: url("assets/img/#{$item}.png");
+  }
+}
+
+
+
+/*
+ * OUTPUT
+ */
+
+.sun {
+  margin: 30px;
+  background-image: url("assets/img/sun.png");
+}
+
+.glass {
+  padding: 20px;
+  margin: 10px;
+  background-image: url("assets/img/glass.png");
+}
+
+.sunset {
+  margin: 20px;
+  background-image: url("assets/img/sunset.png")
+}

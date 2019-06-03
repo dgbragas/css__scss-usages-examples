@@ -1,0 +1,30 @@
+/*
+ * Uma das grandes vantagens do SCSS é o nesting. Utilizando-o, conseguimos criar um aninhamento
+ * entre os elementos da interface; facilitando, inclusive, a estilização de elementos sem a necessidade
+ * da utilização de diversas classes ou IDs.
+ */
+
+#main-header {
+  font-size: 20px;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-left: 10px;
+
+      a {
+        color: #373737;
+        transition-duration: .5s;
+
+        &:hover {
+          /* 
+           * Quando precisamos colocar classes como ":hover" e relacionados ou, até mesmo, um .minhaDiv.outraDiv
+           * para pegarmos um elementos específico, colocamos o '&' na frente.
+           */
+          color: #ddd;
+        }
+      }
+    }
+  }
+}

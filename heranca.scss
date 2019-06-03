@@ -1,0 +1,24 @@
+/*
+ * Existe também a possibilidade de determinadas classes e IDs herdarem propriedades de outras classes através da herança
+ * presente no próprio SCSS
+ */
+
+.icon {
+  font-family: Impact, sans-serif;
+  line-height: 1;
+  color: #373737;
+}
+
+/*
+ * Cada um dos ícones abaixo, a partir da inserção do "@extend", possuirá as propriedades de um .icon acrescido das suas
+ * próprias estilizações
+ */
+.icon-facebook {
+  @extend .icon;
+  content: '\e301'; // Inserindo ícone do Font Awesome através do content
+}
+
+.icon-twitter {
+  @extend .icon;
+  content: '\e302';
+}

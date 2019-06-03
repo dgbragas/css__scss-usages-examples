@@ -1,0 +1,19 @@
+/*
+ * A principal diferença entre um Mixin e uma Função do SCSS é dita em: funções retornam apenas valores específicos, enquanto
+ * os mixins conseguem retornar uma série de valores / propriedades CSS juntos.
+ */
+
+@mixin border($width: 2px, $type: solid, $color: #ff00) {
+  /*
+   * Aqui possuímos uma série de parâmetros que podem ser passados para propriedades CSS 
+   */
+  border: $width $type $color;
+}
+
+button {
+  /*
+   * Uma vez criado o mixin, podemos chamá-lo através do "@include" e passar parâmetros à ele - ou apenas deixar os parâmetros
+   * default caso os mesmos existam; como mostra o exemplo acima
+   */
+  @include border(5px, dotted, green);
+}

@@ -1,0 +1,14 @@
+/*
+ * Conseguimos importar outros arquivos de maneira simplícita dentro do SCSS, e com um grande diferencial: quando fazemos uma
+ * importação em CSS, o comportamento ocorrente é de copiar novamente toda a folha de estilo à um outro local. Entretanto,
+ * estamos trabalhando com SCSS, o que acontece é apenas uma referência do arquivo, não havendo a duplicação de código.
+ *
+ * PS.: A ordem de importação dos arquivos implica no arquivo CSS gerado no final. Por isso cuidado nesta ordenação para não sair 
+ * colocando "!important" nas coisas (pelo amor do gosh)
+ */
+
+@import 'subfolder/header';
+
+#content {
+  background-color: #fcfcfc;
+}

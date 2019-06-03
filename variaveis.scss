@@ -1,0 +1,22 @@
+/*
+ * Variáveis, assim como nas linguagens de programação, possuem escopo; e em SCSS não é diferente. 
+ * Podemos declarar variáveis locais ou globais dentro do SCSS e utilizá-las no decorrer do desenvolvimento da aplicação - 
+ * facilitando o processo de mudanças futuras.
+ */
+
+$font: Arial, Helvetica, sans-serif;
+$primary-color: #373737;
+
+body {
+  $variavelLocal: #000;
+  $variavelGlobal: #ddd !global;
+  $primary-color: #ff0; // Não mais a cor "#373737" será utilizada neste escopo
+
+  font-family: $font;
+  background-color: $primary-color; // #ff0
+}
+
+#main-header {
+  background-color: $variavelGlobal; // #ddd
+  border-color: $primary-color; // #373737
+}

@@ -1,0 +1,11 @@
+/*
+ * Juntando as variáveis com operações matemáticas, conseguimos fazer uma série de operadores que facilitam alguns cálculos
+ * na construção; podendo até mesmo utilizá-los em conjunto da função "calc()" do próprio CSS3
+ */
+
+$gap: 20px;
+$viewport: 800px;
+
+.item {
+  width: ($viewport / 2) - (4 * $gap)px; // 320px
+}

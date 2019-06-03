@@ -1,0 +1,38 @@
+/*
+ * Dentro do SCSS existem algumas funções pré-estabelecidas que conseguem facilitar diversas necessidades e interações
+ * com cores, strings, seletores entre outros. Entretando, também conseguimos criar as nossas próprias funções e utilizá-las
+ * no desenvolvimento de nossa aplicação ou website.
+ */
+
+$primary: #373737; // Variável SCSS
+
+button {
+  /*
+   * A função lighten faz com que consigamos pegar uma cor mais brilho, inserindo uma porcentagem de "efeito luminoso".
+   * PS.: O retorno disto gera uma "porcentagem" de luminosidade em cima do valor.
+   */
+  color: lighten($primary, 10);
+  border-color: rgba(lighten($primary, 10), .8); // Também conseguimos utilizar esta função como um uso de RGBA
+}
+
+
+/* 
+ * Lidando com funções criadas pelo próprio desenvolvedor, podemos usar alguns recursos como: valores padrões e espera de
+ * parâmetros para conceder um determinado retorno. 
+ * No exemplo abaixo, uma função de multiplicação faz com que tenhamos um determinado retorno de n1 * n2 + px. Ex.: 
+ * n1 = 10, 
+ * n2 = 30, 
+ * retorno = 30px
+ */
+@function multiplique($n1, $n2: 50) {
+  @return #{$n1 * $n2}px;
+}
+
+button {
+  margin: multiplique(10, 30);
+}
+
+/*
+ * Saiba mais neste link: https://sass-lang.com/documentation/functions/
+ */
+ 
